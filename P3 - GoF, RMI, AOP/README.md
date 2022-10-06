@@ -1,6 +1,6 @@
-GoF, RMI, AOP 
+# GoF, RMI, AOP 
 
-Bob Tarr: CMSC446 Introduction To Design Patterns, 2006
+## Bob Tarr: CMSC446 Introduction To Design Patterns, 2006
 
 
 -----------------------------------------------------------
@@ -8,47 +8,51 @@ Bob Tarr: CMSC446 Introduction To Design Patterns, 2006
 [RMI Auction Server Project](http://userpages.umbc.edu/~tarr/dp/spr06/projects/Project2.html)
 
 
--------------------------------------------------------------------------------------------------
+-----------------------------------------------------------
 
 * * *
 
 ### 
 
-Project Description
+### Project Description
 
 In this project, you will be implementing a simple auction system. The "auction server" and the "auction client" will be implemented using RMI. The server will be used to maintain a list of items available for auction purchase. Clients will be allowed to make bids on available items or put new items up for auction. Clients can also be notified when the current bid on a particular item changes. In addition, the client will be able to specify different automatic bidding strategies.
 
 This application will require that both the client and server have remote objects. The server has a remote object which implements the following interface:
 
       public interface IAuctionServer extends Remote {
-         public void placeItemForBid(String ownerName, String itemName, 
-           String itemDesc, double startBid, int auctionTime) 
-           throws RemoteException;
-         public void bidOnItem(String bidderName, String itemName, 
-           double bid) throws RemoteException;
+         public void placeItemForBid(String ownerName, String itemName, String itemDesc, double startBid, int auctionTime) throws RemoteException;
+         public void bidOnItem(String bidderName, String itemName, double bid) throws RemoteException;
          public Item\[\] getItems() throws RemoteException;
-         public void registerListener(IAuctionListener al, String itemName) 
-           throws RemoteException
+         public void registerListener(IAuctionListener al, String itemName) throws RemoteException
       }
 
 These methods do the following:
 
-*    public void placeItemForBid(String ownerName, String itemName, 
-               String itemDesc, double startBid, int auctionTime) 
+*    public void placeItemForBid(String ownerName, String itemName, String itemDesc, double startBid, int auctionTime) 
     
-    Puts a new item up for auction by the owner with name ownerName. The itemName argument uniquely identifies the new item to be auctioned. If an item by that name already is up for auction in the server, a RemoteException is thrown. A description of the item is given by the itemDesc argument. The starting (minimum) bid is given by the startBid argument. The item will be available for auction for the number of seconds given by the auctionTime argument.
+    Puts a new item up for auction by the owner with name ownerName. 
+    The itemName argument uniquely identifies the new item to be auctioned. 
+    If an item by that name already is up for auction in the server, a RemoteException is thrown. 
+    A description of the item is given by the itemDesc argument. The starting (minimum) bid is given by the startBid argument. 
+    The item will be available for auction for the number of seconds given by the auctionTime argument.
     
 *    public void bidOnItem(String bidderName, String itemName, double bid) 
     
-    The bidder with name bidderName makes a new bid on the item specified by the itemName argument. The bid amount is specified by the bid argument. For the bid to be accepted it must be higher than the current bid on the specified item, else a RemoteException is thrown.
+    The bidder with name bidderName makes a new bid on the item specified by the itemName argument. 
+    The bid amount is specified by the bid argument. 
+    For the bid to be accepted it must be higher than the current bid on the specified item, else a RemoteException is thrown.
     
 *    public Item\[\] getItems() 
     
-    Returns an array of items available for auction. Each Item object consists of the owner's name, item name, item description, current bid, current bidder's name and time remaining on the auction period for the item.
+    Returns an array of items available for auction. Each Item object consists of the owner's name, item name, 
+    item description, current bid, current bidder's name and time remaining on the auction period for the item.
     
 *    public void registerListener(IAuctionListener al, String itemName) 
     
-    Registers a listener with the auction server for changes in the item specified by the itemName argument. Whenever the current bid on the specified item changes (or its auction period expires), the IAuctionListener is notified via its update() method. Note that the IAuctionListener object is a remote object!
+    Registers a listener with the auction server for changes in the item specified by the itemName argument. 
+    Whenever the current bid on the specified item changes (or its auction period expires), the IAuctionListener is notified via its update() method. 
+    Note that the IAuctionListener object is a remote object!
     
 
 Any client object which desires to be notified of changes in the bid status of a specific item must implement the following interface:
@@ -68,7 +72,7 @@ The update() method of this interface does the following:
 
 ### 
 
-Project Requirements
+### Project Requirements
 
 Use the above interfaces to write a **working** version of the RMI auction server application. Implement both the server and the client programs.
 
@@ -98,6 +102,6 @@ Your project code must also be well documented and use a reasonable indentation 
 
 ### 
 
-Project Grading
+### Project Grading
 
 [Szczegółowa specyfikacja wymagań projektowych](./Szczegolowa_specyfikacja_wymagan_projektowych.pdf)
