@@ -51,8 +51,8 @@ These methods do the following:
 *    public void registerListener(IAuctionListener al, String itemName) 
     
     Registers a listener with the auction server for changes in the item specified by the itemName argument. 
-    Whenever the current bid on the specified item changes (or its auction period expires), the IAuctionListener is notified via its update() method. 
-    Note that the IAuctionListener object is a remote object!
+    Whenever the current bid on the specified item changes (or its auction period expires), the IAuctionListener 
+    is notified via its update() method. Note that the IAuctionListener object is a remote object!
     
 
 Any client object which desires to be notified of changes in the bid status of a specific item must implement the following interface:
@@ -65,7 +65,8 @@ The update() method of this interface does the following:
 
 *    public void update(Item item) 
     
-    Invoked by the auction server for each IAuctionListener which has registered to be notified of changes in the bid status of the specified item.
+    Invoked by the auction server for each IAuctionListener which has registered to be notified of changes
+    in the bid status of the specified item.
     
 
 * * *
