@@ -12,6 +12,7 @@ II. Observer
 ============
 
 Zapoznać się z programem _Game of Life_ ([Game\_of\_Life.zip](./Game_of_Life.zip)). Zrefaktoryzować program do postaci przedstawionej na poniższym diagramie wykorzystując wzorzec Observer. 
+
 ![Game_of_Life_with_Observer](./Game_of_Life_with_Observer.jpg)
 
 Stworzenie projektu w IntelliJ:
