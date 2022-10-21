@@ -11,7 +11,7 @@
 
 ## Opis zadania
 
-Zapoznać się z implementacją Binary expression tree bez wykorzystania wzorca Visitor, ale z wykorzystaniem wzorca Composite ([nonpattern.zip](./nonpattern.zip)). Dokończyć implementację operacji inFixPrint() w taki sposób, aby wywołana na korzeniu wydrukowała wyrażenie reprezentowane przez dane drzewo w postaci infix'owej. Następnie przyrostowo (implementacja przyrostowa oznacza, że na danym etapie nie wiemy jakie będą kolejne rozszerzenia) rozszerzyć funkcjonalność drzewa o operacje evaluate(), postFixPrint(), preFixPrint() oraz interpretację nowego operatora - reszta z dzielenia (%). Zastanowić się nad potencjalnymi korzyściami oraz kosztami zastosowania zasady projektowej open/closed. Następnie zaimplementować wersję bazową programu z wykorzystaniem wzorca Visitor. Metodę Parser::parse() zaimplementować tak, aby tworzyła węzły reprezentujące konkretne operacje (np. AdditionNode; patrz diagram poniżej), a nie jak poprzednio ogólne węzły typu BinaryTreeNode. Inkrementalnie dodać funkcjonalność z wersji bez wzorca.  
+Zapoznać się z implementacją Binary expression tree bez wykorzystania wzorca Visitor, ale z wykorzystaniem wzorca Composite ([Project1-Composite](./Project1-Composite)). Dokończyć implementację operacji inFixPrint() w taki sposób, aby wywołana na korzeniu wydrukowała wyrażenie reprezentowane przez dane drzewo w postaci infix'owej. Następnie przyrostowo (implementacja przyrostowa oznacza, że na danym etapie nie wiemy jakie będą kolejne rozszerzenia) rozszerzyć funkcjonalność drzewa o operacje evaluate(), postFixPrint(), preFixPrint() oraz interpretację nowego operatora - reszta z dzielenia (%). Zastanowić się nad potencjalnymi korzyściami oraz kosztami zastosowania zasady projektowej open/closed. Następnie zaimplementować wersję bazową programu z wykorzystaniem wzorca Visitor. Metodę Parser::parse() zaimplementować tak, aby tworzyła węzły reprezentujące konkretne operacje (np. AdditionNode; patrz diagram poniżej), a nie jak poprzednio ogólne węzły typu BinaryTreeNode. Inkrementalnie dodać funkcjonalność z wersji bez wzorca.  
 ![VisitorPattern](./VisitorPattern.jpg)
 
 ## Punktacja
@@ -38,12 +38,14 @@ Przygotować implementację algorytmu prostej [kompresji/dekompresji](http://www
 Klasy `CipherInputStream` oraz `CipherOutputStream` powinny używać identycznego klucza domyślnego jeśli klucz nie zostanie przekazany w konstruktorze.  
 Klasy `java.io.FilterOutputStream` oraz `java.io.FilterInputStream` pełnią rolę dekoratorów i trzymają referencję na fizyczny strumień, który pełni rolę komponentu (patrz diagram z wykładu). Z kolei klasy, które mają zostać zaimplementowane pełnią rolę konkretnych dekoratorów.
 
-![cipher](./Cipher.png)
-
 ## Punktacja
 
 *   implementacja i demonstracja CipherOutputStream oraz CipherInputStream (2,5 pkt)
 *   implementacja i demonstracja PackerOutputStream oraz UnpackerInputStream (2,5 pkt)
 *   demonstracja całości jako jednego strumienia, który pakuje i szyfruje oraz drugiego, który deszyfruje i rozpakowuje (1 pkt)
 
-Warunkiem koniecznym zdobycia punktów jest spełnenie odpowiednich testów JUnit ([CipherPacker\_stud.zip](./CipherPacker_stud.zip)).
+Warunkiem koniecznym zdobycia punktów jest spełnenie odpowiednich testów JUnit ([Project1-CipherPacker](./Project1-CipherPacker)).
+
+## Algorytm symetrycznego szyfru strumieniowego
+
+![cipher](./Cipher.png)
