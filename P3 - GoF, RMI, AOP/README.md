@@ -106,3 +106,5 @@ Your project code must also be well documented and use a reasonable indentation 
 ### Project Grading
 
 [Szczegółowa specyfikacja wymagań projektowych](./Szczegolowa_specyfikacja_wymagan_projektowych.pdf)
+
+![Szczegółowa specyfikacja wymagań projektowych](./Szczegolowa_specyfikacja_wymagan_projektowych-1.jpg)
