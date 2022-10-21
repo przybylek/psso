@@ -2,10 +2,17 @@
 
 ## I. Prototype
 
-Zapoznać się z dotychczasową implementacją wzorca Prototype ([prototype\_OO\_stud.zip](./prototype_OO_stud.zip)). Aby zaimportować archiwum pod Eclipse należy wybrać: `File->Import...->General->Existing Projects into Workspace->Select archive file`.  
-Stworzyć interfejs `IPrototype` wyposarzony w domyślne implementacje `shallowClone()` oraz `deepClone()` (wykorzystać _default methods_ wprowadzone w Java 8).  
-Zmodyfikować klasę `Car` w taki sposób, aby zamiast dziedziczć po klasie `Prototype`, implementować interfejs `IPrototype`.  
+Zapoznać się z dotychczasową implementacją wzorca Prototype.
+Stworzyć interfejs `IPrototype` wyposażony w domyślne implementacje `shallowClone()` oraz `deepClone()` (wykorzystać _default methods_ wprowadzone w Java 8).  
+Zmodyfikować klasę `Car` w taki sposób, aby zamiast dziedziczć po klasie `Prototype`, implementowała interfejs `IPrototype`.  
 Napisać testy _JUnit_ weryfikujące poprawne działanie metod kopiujących na obiektach `Car`.
+
+### Uruchomienie projektu
+#### 1) Opcja: Uruchomienie [Task1-Prototype](./Task1-Prototype) (Maven)
+Otwórz IDE (IntelliJ, VSCode, Eclipse) i zaimportuj projekt.
+
+#### 2) Opcja: Uruchomienie [prototype\_OO\_stud.zip](./prototype_OO_stud.zip)
+Aby zaimportować archiwum pod Eclipse należy wybrać: `File->Import...->General->Existing Projects into Workspace->Select archive file`.
 
 ## II. Observer
 

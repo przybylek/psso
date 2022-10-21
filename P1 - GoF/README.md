@@ -38,6 +38,8 @@ Przygotować implementację algorytmu prostej [kompresji/dekompresji](http://www
 Klasy `CipherInputStream` oraz `CipherOutputStream` powinny używać identycznego klucza domyślnego jeśli klucz nie zostanie przekazany w konstruktorze.  
 Klasy `java.io.FilterOutputStream` oraz `java.io.FilterInputStream` pełnią rolę dekoratorów i trzymają referencję na fizyczny strumień, który pełni rolę komponentu (patrz diagram z wykładu). Z kolei klasy, które mają zostać zaimplementowane pełnią rolę konkretnych dekoratorów.
 
+![cipher](./Cipher.png)
+
 ## Punktacja
 
 *   implementacja i demonstracja CipherOutputStream oraz CipherInputStream (2,5 pkt)
