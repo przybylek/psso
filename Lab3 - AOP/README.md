@@ -3,13 +3,13 @@
 ## Documentation
 
 *   [AspectJ](http://eclipse.org/aspectj/)
-*   [Lecture examples](./Lecture_examples/)
+*   [Lecture examples](./Lecture_examples)
 
 # Telecom
 
 ## Basic version
 
-_Telecom_ ([telecomOO.zip](./telecomOO.zip)) is a simple simulation of a telephony system in which customers make, accept, merge and hang-up both local and long distance calls. The structure of Telecom is presented in the figure below as a UML class diagram. The initial version comprises the classes Customer, Call and the abstract class Connection with its two concrete subclasses Local and LongDistance. Customers have a name and a numeric area code. They also have methods for managing calls. Simple calls are made between one customer (the caller) and another (the receiver), a Connection object is used to connect them. Conference calls between more than two customers will involve more than one connection. A customer may be involved in many calls at one time.  
+_Telecom_ ([telecomOO.zip](./telecomOO.zip) or [Task-telecom](./Task-telecom)) is a simple simulation of a telephony system in which customers make, accept, merge and hang-up both local and long distance calls. The structure of Telecom is presented in the figure below as a UML class diagram. The initial version comprises the classes Customer, Call and the abstract class Connection with its two concrete subclasses Local and LongDistance. Customers have a name and a numeric area code. They also have methods for managing calls. Simple calls are made between one customer (the caller) and another (the receiver), a Connection object is used to connect them. Conference calls between more than two customers will involve more than one connection. A customer may be involved in many calls at one time.  
 ![basic](./telecom_OO_0.png)
 
 *   `Customer` has methods `call, pickup, hangup` and `merge` for managing calls.
@@ -46,6 +46,13 @@ _Telecom_ ([telecomOO.zip](./telecomOO.zip)) is a simple simulation of a telepho
 *   AO version  
     `Timing` aspect declares that each `Connection` object has a timer. A `Timer` object records the current time when it is started and stopped, and returns their difference when asked for the elapsed time. Two after advices ensure that the timer is started when a connection is completed and stopped when it is dropped. The `Timing` aspect also declares an inter-type field `totalConnectTime` for `Customer` to store the total connection time. This field is updated by the second advice.  
     ![timing](./telecom_AO_1.png)
+
+### Run a project
+#### 1) Option: Run [Task-telecom](./Task-telecom) (Maven)
+Open IDE (IntelliJ, VSCode, Eclipse) and import project.
+
+#### 2) Option: Run [telecomOO.zip](./telecomOO.zip)
+Import to Eclipse: `File->Import...->General->Existing Projects into Workspace->Select archive file`.
 
 ## Producer/Consumer
 
